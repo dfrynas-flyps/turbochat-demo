@@ -1,0 +1,9 @@
+[build]
+entry-points = ["src/index.ts"]
+outdir = "dist"
+minify = true
+target = "node"
+format = ["esm", "cjs"]
+
+[dev]
+hot = true

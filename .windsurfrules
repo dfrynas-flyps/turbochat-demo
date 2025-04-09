@@ -1,0 +1,49 @@
+# Workspace Rules
+
+## Node Version
+- Use Node.js version 22.0.0 or higher for all development work
+- The runtime environment must support ES2022 features
+
+## Package Management
+- Use pnpm as the exclusive package manager
+- Run 'pnpm install' to set up all workspaces and dependencies
+- Do not mix package managers within the project
+
+## Monorepo Structure
+- The project follows a monorepo architecture with Turborepo
+- Respect workspace boundaries and dependencies
+- Internal packages use workspace references (workspace:*)
+
+## Applications
+- Server application:
+  - Located in apps/server
+  - Uses a modern HTTP framework
+  - Build using 'pnpm turbo run build --filter=server'
+  - Output goes to apps/server/dist
+
+- Web application:
+  - Located in apps/turbochat
+  - Uses a React-based framework
+  - Build using 'pnpm turbo run build --filter=turbochat'
+  - Output goes to apps/turbochat/.next
+
+## Shared Packages
+- Common code is stored in the packages directory
+- Each package has its own build process
+- Imports from shared packages use the namespace format
+
+## Development Workflow
+- Run 'pnpm turbo run build' to build all applications and packages
+- Each application can be developed independently with its own 'dev' script
+- Follow TypeScript conventions throughout the codebase
+- Ensure ESLint and other code quality tools pass before committing
+
+## Testing
+- Write tests for all new functionality
+- Run tests individually per package or application
+- Ensure proper isolation between test environments
+
+## Deployment
+- Build artifacts are generated separately for each application
+- Server runs on modern JavaScript runtime
+- Web application is a static site with client-side hydration
