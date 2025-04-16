@@ -26,7 +26,6 @@ const createTasks = ({ session }: CreateTasksProps) =>
     }),
     execute: async ({ tasks }) => {
       try {
-        console.log("tasks", tasks);
         const response = await fetch(`${process.env.SERVER_URL}/tasks/bulk`, {
           method: "POST",
           headers: {

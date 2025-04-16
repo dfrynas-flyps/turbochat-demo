@@ -5,4 +5,6 @@ export enum Tools {
   requestSuggestions = "requestSuggestions",
   createTasks = "createTasks",
   updateTasks = "updateTasks",
+  listTasks = "listTasks",
+  updateTask = "updateTask",
 }

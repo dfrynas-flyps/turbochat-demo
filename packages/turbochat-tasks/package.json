@@ -6,19 +6,11 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "exports": {
-    "./client": {
-      "import": "./dist/client.js",
-      "require": "./dist/client.js",
-      "types": "./dist/client.d.ts"
-    },
-    "./server": {
-      "import": "./dist/server.js",
-      "require": "./dist/server.js",
-      "types": "./dist/server.d.ts"
-    }
+    "./client": "./src/client.ts",
+    "./server": "./src/server.ts"
   },
   "scripts": {
-    "build": "tsc && bun build src/client.ts src/server.ts --outdir dist --format esm --format cjs --target node",
+    "build": "tsc && bun build src/client.ts src/server.ts --outdir dist --format esm --format cjs --target node --declaration",
     "dev": "tsc --watch & bun build src/client.ts src/server.ts --outdir dist --format esm --format cjs --watch --target node",
     "lint": "eslint src/**/*.ts",
     "test": "jest"

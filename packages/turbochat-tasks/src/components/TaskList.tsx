@@ -26,9 +26,9 @@ export const TaskList: React.FC<TaskListProps> = ({ tasks }: TaskListProps) => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto p-4 space-y-4">
+    <div className="w-full max-w-md mx-auto flex flex-col gap-2 p-4 space-y-4">
       {tasks.length === 0 ? (
-        <div className="text-gray-500 text-center">No tasks found</div>
+        <div className="text-gray-100 text-center">No tasks found</div>
       ) : (
         tasks.map((task: Task) => (
           <div
@@ -36,17 +36,17 @@ export const TaskList: React.FC<TaskListProps> = ({ tasks }: TaskListProps) => {
             className="border border-gray-200 shadow rounded-md p-4 w-full"
           >
             <div className="flex justify-between items-start mb-2">
-              <h3 className="font-medium text-gray-900">{task.title}</h3>
+              <h3 className="font-medium text-gray-50">{task.title}</h3>
               <span className={`text-xs px-2 py-1 rounded-full ${getStatusColor(task.status)}`}>
                 {task.status.replace("_", " ")}
               </span>
             </div>
             
             {task.description && (
-              <p className="text-gray-600 text-sm mb-2">{task.description}</p>
+              <p className="text-gray-300 text-sm mb-2">{task.description}</p>
             )}
             
-            <div className="flex justify-between text-xs text-gray-500 mt-2">
+            <div className="flex justify-between text-xs text-gray-300 mt-2">
               <span>Created: {formatDate(task.createdAt)}</span>
               {task.dueDate && (
                 <span>Due: {formatDate(task.dueDate)}</span>

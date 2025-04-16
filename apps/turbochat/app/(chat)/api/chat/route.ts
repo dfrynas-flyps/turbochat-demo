@@ -26,7 +26,7 @@ import { getWeather } from "@/lib/ai/tools/get-weather";
 import { isProductionEnvironment } from "@/lib/constants";
 import { myProvider } from "@/lib/ai/providers";
 import { Tools } from "@/types/Tools";
-import { createTasks } from "@turbochat/tasks/server";
+import { createTasks, listTasks, updateTask } from "@turbochat/tasks/server";
 
 export const maxDuration = 60;
 
@@ -97,11 +97,14 @@ export async function POST(request: Request) {
                   Tools.createDocument,
                   Tools.updateDocument,
                   Tools.requestSuggestions,
+                  Tools.listTasks,
+                  Tools.updateTask,
                 ],
           experimental_transform: smoothStream({ chunking: "word" }),
           experimental_generateMessageId: generateUUID,
           tools: {
             createTasks: createTasks({ session }),
+            listTasks: listTasks({ session }),
             getWeather,
             createDocument: createDocument({ session, dataStream }),
             updateDocument: updateDocument({ session, dataStream }),
@@ -109,6 +112,7 @@ export async function POST(request: Request) {
               session,
               dataStream,
             }),
+            updateTask: updateTask({ session }),
           },
           onFinish: async ({ response }) => {
             if (session.user?.id) {
@@ -158,7 +162,8 @@ export async function POST(request: Request) {
           sendReasoning: true,
         });
       },
-      onError: () => {
+      onError: (err) => {
+        console.log({ error: err })
         return "Oops, an error occured!";
       },
     });

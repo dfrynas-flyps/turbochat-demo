@@ -79,6 +79,13 @@ export const Tool = ({
     return <Tasks.TaskList tasks={result} />;
   }
 
+  if (toolName === Tools.listTasks) {
+    if (!result) {
+      return <Tasks.TaskLoaderSkeleton />;
+    }
+    return <Tasks.TaskList tasks={result} />;
+  }
+
   if (state === "result") {
     return <pre>{JSON.stringify(result, null, 2)}</pre>;
   }
