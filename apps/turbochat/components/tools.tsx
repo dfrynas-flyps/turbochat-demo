@@ -86,6 +86,24 @@ export const Tool = ({
     return <Tasks.TaskList tasks={result} />;
   }
 
+  if (toolName === Tools.updateTask) {
+    if (!result) {
+      return 'Loading task update...';
+    }
+
+    if (!result?.id) {
+      return 'Task not found';
+    }
+    return <Tasks.TaskDetails task={result} />;
+  }
+
+  if (toolName === Tools.taskDetails) {
+    if (!result) {
+      return 'Loading task details...';
+    }
+    return <Tasks.TaskDetails task={result} />;
+  }
+
   if (state === "result") {
     return <pre>{JSON.stringify(result, null, 2)}</pre>;
   }

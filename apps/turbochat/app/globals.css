@@ -58,7 +58,7 @@
         --sidebar-border: 220 13% 91%;
         --sidebar-ring: 217.2 91.2% 59.8%;
     }
-    .dark {
+    [data-theme="dark"] {
         --background: 240 10% 3.9%;
         --foreground: 0 0% 98%;
         --card: 240 10% 3.9%;
@@ -92,6 +92,74 @@
         --sidebar-border: 240 3.7% 15.9%;
         --sidebar-ring: 217.2 91.2% 59.8%;
     }
+
+    [data-theme="environmental"] {
+        /* Base colors using forest, earth, and natural tones */
+        --background: 90 25% 98%;        /* Very light sage green background */
+        --foreground: 120 10% 20%;       /* Dark forest green text for readability */
+        
+        /* Card elements */
+        --card: 80 15% 96%;              /* Light earthy tone for cards */
+        --card-foreground: 120 10% 20%;  /* Same dark green for card text */
+        
+        /* Popover elements */
+        --popover: 80 15% 96%;           /* Match card background */
+        --popover-foreground: 120 10% 20%; /* Match card foreground */
+        
+        /* Primary accents - forest green */
+        --primary: 150 50% 40%;          /* Medium forest green */
+        --primary-foreground: 80 15% 96%; /* Light earthy tone for contrast */
+        
+        /* Secondary accents - earth brown */
+        --secondary: 25 30% 85%;         /* Soft earth tone */
+        --secondary-foreground: 25 50% 20%; /* Dark brown */
+        
+        /* Muted elements */
+        --muted: 120 10% 88%;            /* Muted sage */
+        --muted-foreground: 120 10% 40%; /* Darker muted sage for text */
+        
+        /* Accent elements - leaf green */
+        --accent: 120 40% 60%;           /* Vibrant leaf green */
+        --accent-foreground: 0 0% 98%;   /* Almost white for readability */
+        
+        /* Destructive elements - natural red */
+        --destructive: 0 60% 50%;        /* Natural red for warnings */
+        --destructive-foreground: 0 0% 98%; /* Almost white for readability */
+        
+        /* Borders and inputs */
+        --border: 120 10% 80%;           /* Light sage border */
+        --input: 120 10% 80%;            /* Match border color */
+        --ring: 150 50% 40%;             /* Match primary color */
+        --radius: 0.5rem;                /* Keep consistent radius */
+        
+        /* Chart colors - nature-inspired palette */
+        --chart-1: 150 50% 40%;          /* Forest green */
+        --chart-2: 25 60% 45%;           /* Earth brown */
+        --chart-3: 120 40% 60%;          /* Leaf green */
+        --chart-4: 200 60% 45%;          /* Water blue */
+        --chart-5: 45 80% 60%;           /* Sunlight yellow */
+        
+        /* Sidebar specific colors */
+        --sidebar-background: 120 15% 25%; /* Dark forest green sidebar */
+        --sidebar-foreground: 80 15% 96%; /* Light earthy text for contrast */
+        --sidebar-primary: 80 30% 60%;   /* Moss green */
+        --sidebar-primary-foreground: 120 15% 25%; /* Dark forest background */
+        --sidebar-accent: 45 80% 60%;    /* Sunlight accent */
+        --sidebar-accent-foreground: 120 15% 25%; /* Dark forest background */
+        --sidebar-border: 120 15% 35%;   /* Slightly lighter than sidebar background */
+        --sidebar-ring: 80 30% 60%;      /* Match sidebar primary */
+      }
+
+      [data-theme="admin"] {
+        --background: 210 20% 98%;
+        --foreground: 222.2 47.4% 11.2%;
+        --primary: 200 100% 40%;
+        --primary-foreground: 210 40% 98%;
+        --accent: 48 100% 67.1%;
+        --accent-foreground: 222.2 47.4% 11.2%;
+        /* Add more overrides as needed for admin look */
+      }      
+      
 }
 
 @layer base {

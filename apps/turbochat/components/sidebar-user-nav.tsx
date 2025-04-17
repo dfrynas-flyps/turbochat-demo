@@ -1,5 +1,5 @@
 'use client';
-import { ChevronUp } from 'lucide-react';
+import { ChevronUp, Leaf, Moon, Sun, ShieldCheck } from 'lucide-react';
 import Image from 'next/image';
 import type { User } from 'next-auth';
 import { signOut } from 'next-auth/react';
@@ -18,8 +18,28 @@ import {
   SidebarMenuItem,
 } from '@/components/ui/sidebar';
 
+
+const themes = {
+  light: {
+    label: 'light',
+    icon: <Sun className="mr-2 h-4 w-4" />,
+  },
+  dark: {
+    label: 'dark',
+    icon: <Moon className="mr-2 h-4 w-4" />,
+  },
+  environmental: {
+    label: 'environmental',
+    icon: <Leaf className="mr-2 h-4 w-4" />,
+  },
+  admin: {
+    label: 'admin',
+    icon: <ShieldCheck className="mr-2 h-4 w-4" />,
+  },
+} as const;
+
 export function SidebarUserNav({ user }: { user: User }) {
-  const { setTheme, theme } = useTheme();
+  const { setTheme } = useTheme();
 
   return (
     <SidebarMenu>
@@ -42,12 +62,16 @@ export function SidebarUserNav({ user }: { user: User }) {
             side="top"
             className="w-[--radix-popper-anchor-width]"
           >
-            <DropdownMenuItem
-              className="cursor-pointer"
-              onSelect={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            >
-              {`Toggle ${theme === 'light' ? 'dark' : 'light'} mode`}
-            </DropdownMenuItem>
+            {Object.entries(themes).map(([key, value]) => (
+              <DropdownMenuItem
+                key={key}
+                className="cursor-pointer"
+                onSelect={() => setTheme(value.label)}
+              >
+                {value.icon}
+                <span className="capitalize">{value.label}</span>
+              </DropdownMenuItem>
+            ))}
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
               <button

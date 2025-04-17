@@ -1,3 +1,5 @@
+// Theme tokens are now provided via @turbochat/theme-tokens and should be imported in the app's root CSS/TSX.
+
 import type { Config } from 'tailwindcss';
 
 const config: Config = {

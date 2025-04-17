@@ -26,7 +26,7 @@ import { getWeather } from "@/lib/ai/tools/get-weather";
 import { isProductionEnvironment } from "@/lib/constants";
 import { myProvider } from "@/lib/ai/providers";
 import { Tools } from "@/types/Tools";
-import { createTasks, listTasks, updateTask } from "@turbochat/tasks/server";
+import { createTasks, listTasks, updateTask, taskDetails } from "@turbochat/tasks/server";
 
 export const maxDuration = 60;
 
@@ -99,6 +99,7 @@ export async function POST(request: Request) {
                   Tools.requestSuggestions,
                   Tools.listTasks,
                   Tools.updateTask,
+                  Tools.taskDetails,
                 ],
           experimental_transform: smoothStream({ chunking: "word" }),
           experimental_generateMessageId: generateUUID,
@@ -113,6 +114,7 @@ export async function POST(request: Request) {
               dataStream,
             }),
             updateTask: updateTask({ session }),
+            taskDetails: taskDetails({ session }),
           },
           onFinish: async ({ response }) => {
             if (session.user?.id) {

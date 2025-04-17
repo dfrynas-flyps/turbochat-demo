@@ -27,7 +27,7 @@ const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
 });
 
-const LIGHT_THEME_COLOR = 'hsl(0 0% 100%)';
+const ENVIRONMENTAL_THEME_COLOR = 'hsl(90 25% 98%)'; // Light sage green from our theme
 const DARK_THEME_COLOR = 'hsl(240deg 10% 3.92%)';
 const THEME_COLOR_SCRIPT = `\
 (function() {
@@ -39,11 +39,17 @@ const THEME_COLOR_SCRIPT = `\
     document.head.appendChild(meta);
   }
   function updateThemeColor() {
-    var isDark = html.classList.contains('dark');
-    meta.setAttribute('content', isDark ? '${DARK_THEME_COLOR}' : '${LIGHT_THEME_COLOR}');
+    var theme = html.getAttribute('data-theme');
+    if (theme === 'environmental') {
+      meta.setAttribute('content', '${ENVIRONMENTAL_THEME_COLOR}');
+    } else if (theme === 'dark') {
+      meta.setAttribute('content', '${DARK_THEME_COLOR}');
+    } else {
+      meta.setAttribute('content', '${ENVIRONMENTAL_THEME_COLOR}');
+    }
   }
   var observer = new MutationObserver(updateThemeColor);
-  observer.observe(html, { attributes: true, attributeFilter: ['class'] });
+  observer.observe(html, { attributes: true, attributeFilter: ['data-theme'] });
   updateThemeColor();
 })();`;
 
@@ -71,9 +77,8 @@ export default async function RootLayout({
       </head>
       <body className="antialiased">
         <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="environmental"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <Toaster position="top-center" />
