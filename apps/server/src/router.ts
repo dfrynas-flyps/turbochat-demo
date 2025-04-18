@@ -1,6 +1,5 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
-import { tasksRouter } from "@turbochat/tasks/server";
 
 export const apiRouter = new Hono();
 
@@ -13,4 +12,3 @@ apiRouter.get("/health", (c) => {
   });
 });
 
-apiRouter.route("/tasks", tasksRouter);

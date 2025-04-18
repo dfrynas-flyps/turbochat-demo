@@ -13,9 +13,6 @@
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
-    "paths": {
-      "turbochat-tasks": ["packages/turbochat-tasks/src"]
-    }
   },
   "exclude": ["node_modules", "**/node_modules/*"]
 }
