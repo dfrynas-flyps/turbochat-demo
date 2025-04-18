@@ -163,6 +163,7 @@ export const task = pgTable('Task', {
     .references(() => user.id),
   createdAt: timestamp('createdAt').notNull(),
   dueDate: timestamp('dueDate'),
+  
 });
 
 export type Task = InferSelectModel<typeof task>;

@@ -3,6 +3,7 @@ import { DocumentPreview } from "./document-preview";
 import { DocumentToolCall, DocumentToolResult } from "./document";
 import { ToolInvocationState } from "@/types/ToolInvocationState";
 import { Tools } from "@/types/Tools";
+import TasksComponents from "@turbochat/tasks/components";
 
 interface ToolProps {
   state: ToolInvocationState;
@@ -69,6 +70,13 @@ export const Tool = ({
         isReadonly={isReadonly}
       />
     );
+  }
+
+  if (toolName === Tools.createTasks) {
+    if (!result) {
+      return <TasksComponents.TaskLoaderSkeleton />;
+    }
+    return <TasksComponents.TaskList tasks={result} />;
   }
 
   if (state === "result") {
