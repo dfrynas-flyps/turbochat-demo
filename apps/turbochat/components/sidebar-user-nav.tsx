@@ -18,7 +18,6 @@ import {
   SidebarMenuItem,
 } from '@/components/ui/sidebar';
 
-
 const themes = {
   light: {
     label: 'light',

@@ -150,20 +150,3 @@ export const suggestion = pgTable(
 );
 
 export type Suggestion = InferSelectModel<typeof suggestion>;
-
-export const task = pgTable('Task', {
-  id: uuid('id').primaryKey().notNull().defaultRandom(),
-  title: text('title').notNull(),
-  description: text('description'),
-  status: varchar('status', { enum: ['todo', 'in_progress', 'done'] })
-    .notNull()
-    .default('todo'),
-  userId: uuid('userId')
-    .notNull()
-    .references(() => user.id),
-  createdAt: timestamp('createdAt').notNull(),
-  dueDate: timestamp('dueDate'),
-  
-});
-
-export type Task = InferSelectModel<typeof task>;

@@ -1,9 +1,8 @@
-import { Weather } from "./weather";
-import { DocumentPreview } from "./document-preview";
-import { DocumentToolCall, DocumentToolResult } from "./document";
-import { ToolInvocationState } from "@/types/ToolInvocationState";
-import { Tools } from "@/types/Tools";
-import TasksComponents from "@turbochat/tasks/components";
+import { Weather } from './weather';
+import { DocumentPreview } from './document-preview';
+import { DocumentToolCall, DocumentToolResult } from './document';
+import { ToolInvocationState } from '@/types/ToolInvocationState';
+import { Tools } from '@/types/Tools';
 
 interface ToolProps {
   state: ToolInvocationState;
@@ -72,14 +71,7 @@ export const Tool = ({
     );
   }
 
-  if (toolName === Tools.createTasks) {
-    if (!result) {
-      return <TasksComponents.TaskLoaderSkeleton />;
-    }
-    return <TasksComponents.TaskList tasks={result} />;
-  }
-
-  if (state === "result") {
+  if (state === 'result') {
     return <pre>{JSON.stringify(result, null, 2)}</pre>;
   }
 

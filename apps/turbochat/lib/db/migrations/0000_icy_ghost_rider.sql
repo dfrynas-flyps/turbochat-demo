@@ -46,16 +46,6 @@ CREATE TABLE IF NOT EXISTS "Suggestion" (
 	CONSTRAINT "Suggestion_id_pk" PRIMARY KEY("id")
 );
 --> statement-breakpoint
-CREATE TABLE IF NOT EXISTS "Task" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
-	"title" text NOT NULL,
-	"description" text,
-	"status" varchar DEFAULT 'todo' NOT NULL,
-	"userId" uuid NOT NULL,
-	"createdAt" timestamp NOT NULL,
-	"dueDate" timestamp
-);
---> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "User" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"email" varchar(64) NOT NULL,
@@ -108,12 +98,6 @@ END $$;
 --> statement-breakpoint
 DO $$ BEGIN
  ALTER TABLE "Suggestion" ADD CONSTRAINT "Suggestion_documentId_documentCreatedAt_Document_id_createdAt_fk" FOREIGN KEY ("documentId","documentCreatedAt") REFERENCES "public"."Document"("id","createdAt") ON DELETE no action ON UPDATE no action;
-EXCEPTION
- WHEN duplicate_object THEN null;
-END $$;
---> statement-breakpoint
-DO $$ BEGIN
- ALTER TABLE "Task" ADD CONSTRAINT "Task_userId_User_id_fk" FOREIGN KEY ("userId") REFERENCES "public"."User"("id") ON DELETE no action ON UPDATE no action;
 EXCEPTION
  WHEN duplicate_object THEN null;
 END $$;
