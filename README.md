@@ -1,10 +1,8 @@
 # TurboChat Monorepo
 
-A modern chat application built with a Turborepo monorepo architecture, featuring a Next.js web application and a backend server.
+An extensible AI chat application built with Turborepo monorepo architecture, featuring a Next.js web interface and a backend server that enables routing and integration with additional modules. Designed as a core platform for wildfires.org software ecosystem, it supports seamless integration with additional modules like task management or document processing. The application can be extended through both LLM-powered automation and manual development, offering a flexible foundation for building sophisticated AI-powered workflows and interfaces.
 
-![TurboChat](https://via.placeholder.com/800x400?text=TurboChat)
-
-## 🚀 Project Structure
+## Project Structure
 
 ```
 turbochat/
@@ -16,7 +14,7 @@ turbochat/
 └── package.json         # Root package configuration
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Node.js**: v22.0.0+
 - **Package Manager**: pnpm
