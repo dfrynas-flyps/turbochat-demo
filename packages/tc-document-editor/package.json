@@ -21,7 +21,7 @@
 	},
 	"dependencies": {
 		"@hono/zod-validator": "^0.4.3",
-		"@wildfires-org/document-editor": "git+https://dfrynas-flyps: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@github.com/Wildfires-org/document-editor.git#develop",
+		"@wildfires-org/document-editor": "git+https://dfrynas-flyps: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@github.com/Wildfires-org/document-editor.git#develop",
 		"ai": "^4.0.0",
 		"drizzle-orm": "^0.30.9",
 		"hono": "^4.7.5",
