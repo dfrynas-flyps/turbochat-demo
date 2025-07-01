@@ -59,7 +59,7 @@ export declare const fetchData: import("@reduxjs/toolkit").AsyncThunk<TemplateDa
 }, {
     rejectValue: ApiError;
     state?: unknown;
-    dispatch?: import("redux-thunk").ThunkDispatch<unknown, unknown, import("redux").UnknownAction> | undefined;
+    dispatch?: import("@reduxjs/toolkit").ThunkDispatch<unknown, unknown, import("@reduxjs/toolkit").UnknownAction> | undefined;
     extra?: unknown;
     serializedErrorType?: unknown;
     pendingMeta?: unknown;
@@ -71,7 +71,7 @@ export declare const getData: import("@reduxjs/toolkit").AsyncThunk<TemplateData
 }, {
     rejectValue: ApiError;
     state?: unknown;
-    dispatch?: import("redux-thunk").ThunkDispatch<unknown, unknown, import("redux").UnknownAction> | undefined;
+    dispatch?: import("@reduxjs/toolkit").ThunkDispatch<unknown, unknown, import("@reduxjs/toolkit").UnknownAction> | undefined;
     extra?: unknown;
     serializedErrorType?: unknown;
     pendingMeta?: unknown;
@@ -84,7 +84,7 @@ export declare const saveData: import("@reduxjs/toolkit").AsyncThunk<TemplateDat
     createDocument?: boolean;
 }, {
     state?: unknown;
-    dispatch?: import("redux-thunk").ThunkDispatch<unknown, unknown, import("redux").UnknownAction>;
+    dispatch?: import("@reduxjs/toolkit").ThunkDispatch<unknown, unknown, import("@reduxjs/toolkit").UnknownAction>;
     extra?: unknown;
     rejectValue?: unknown;
     serializedErrorType?: unknown;
@@ -98,7 +98,7 @@ export declare const fetchVariableAIOptions: import("@reduxjs/toolkit").AsyncThu
         variableName: string;
     };
     state?: unknown;
-    dispatch?: import("redux-thunk").ThunkDispatch<unknown, unknown, import("redux").UnknownAction> | undefined;
+    dispatch?: import("@reduxjs/toolkit").ThunkDispatch<unknown, unknown, import("@reduxjs/toolkit").UnknownAction> | undefined;
     extra?: unknown;
     serializedErrorType?: unknown;
     pendingMeta?: unknown;
@@ -111,7 +111,7 @@ export declare const getVariableLatestValues: import("@reduxjs/toolkit").AsyncTh
         variableName: string;
     };
     state?: unknown;
-    dispatch?: import("redux-thunk").ThunkDispatch<unknown, unknown, import("redux").UnknownAction> | undefined;
+    dispatch?: import("@reduxjs/toolkit").ThunkDispatch<unknown, unknown, import("@reduxjs/toolkit").UnknownAction> | undefined;
     extra?: unknown;
     serializedErrorType?: unknown;
     pendingMeta?: unknown;
@@ -124,7 +124,7 @@ export declare const setVariableLatestValues: import("@reduxjs/toolkit").AsyncTh
         variableName: string;
     };
     state?: unknown;
-    dispatch?: import("redux-thunk").ThunkDispatch<unknown, unknown, import("redux").UnknownAction> | undefined;
+    dispatch?: import("@reduxjs/toolkit").ThunkDispatch<unknown, unknown, import("@reduxjs/toolkit").UnknownAction> | undefined;
     extra?: unknown;
     serializedErrorType?: unknown;
     pendingMeta?: unknown;
@@ -135,7 +135,7 @@ export declare const getPrompts: import("@reduxjs/toolkit").AsyncThunk<{
     prompts: Record<PromptTypes, Prompt[]>;
 }, void, {
     state?: unknown;
-    dispatch?: import("redux-thunk").ThunkDispatch<unknown, unknown, import("redux").UnknownAction>;
+    dispatch?: import("@reduxjs/toolkit").ThunkDispatch<unknown, unknown, import("@reduxjs/toolkit").UnknownAction>;
     extra?: unknown;
     rejectValue?: unknown;
     serializedErrorType?: unknown;
@@ -150,7 +150,7 @@ export declare const setPrompts: import("@reduxjs/toolkit").AsyncThunk<{
     promptType: PromptTypes;
 }, {
     state?: unknown;
-    dispatch?: import("redux-thunk").ThunkDispatch<unknown, unknown, import("redux").UnknownAction>;
+    dispatch?: import("@reduxjs/toolkit").ThunkDispatch<unknown, unknown, import("@reduxjs/toolkit").UnknownAction>;
     extra?: unknown;
     rejectValue?: unknown;
     serializedErrorType?: unknown;

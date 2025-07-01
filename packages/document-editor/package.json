@@ -1,82 +1,84 @@
 {
-  "name": "@wildfires-org/document-editor",
-  "version": "0.1.6",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.js"
-    }
-  },
-  "license": "MIT",
-  "files": ["dist"],
-  "sideEffects": false,
-  "scripts": {
-    "build": "tsc",
-    "clean": "rm -rf dist",
-    "dev": "tsc --watch",
-    "prepublishOnly": "npm run clean && npm run build",
-    "lint": "biome lint .",
-    "format": "biome format src --write",
-    "example:basic": "cd examples/basic && npm install && npm run dev"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@mui/icons-material": "^6.4.8",
-    "@mui/material": "^6.4.8",
-    "@reduxjs/toolkit": "^2.6.1",
-    "@tiptap/core": "^2.11.7",
-    "@tiptap/extension-bold": "^2.11.7",
-    "@tiptap/extension-bullet-list": "^2.11.7",
-    "@tiptap/extension-character-count": "^2.11.7",
-    "@tiptap/extension-document": "^2.11.7",
-    "@tiptap/extension-heading": "^2.11.7",
-    "@tiptap/extension-history": "^2.11.7",
-    "@tiptap/extension-image": "^2.11.7",
-    "@tiptap/extension-italic": "^2.11.7",
-    "@tiptap/extension-list-item": "^2.11.7",
-    "@tiptap/extension-ordered-list": "^2.11.7",
-    "@tiptap/extension-paragraph": "^2.11.7",
-    "@tiptap/extension-table": "^2.11.7",
-    "@tiptap/extension-table-cell": "^2.11.7",
-    "@tiptap/extension-table-header": "^2.11.7",
-    "@tiptap/extension-table-row": "^2.11.7",
-    "@tiptap/extension-text": "^2.11.7",
-    "@tiptap/extension-underline": "^2.11.7",
-    "@tiptap/html": "^2.11.7",
-    "@tiptap/pm": "^2.11.7",
-    "@tiptap/react": "^2.11.7",
-    "@tiptap/suggestion": "^2.11.7",
-    "html-react-parser": "^5.2.3",
-    "lodash": "^4.17.21",
-    "mui-nested-menu": "^4.0.1",
-    "react-content-loader": "^7.0.2",
-    "react-redux": "^9.2.0",
-    "sanitize-html": "^2.15.0",
-    "usehooks-ts": "^3.1.1",
-    "uuid": "^11.1.0"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "restricted"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "@types/lodash": "^4.17.16",
-    "@types/node": "^20",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "@types/sanitize-html": "^2.15.0",
-    "@types/uuid": "^10.0.0",
-    "eslint": "^9",
-    "typescript": "^5"
-  }
+	"name": "@wildfires-org/document-editor",
+	"version": "0.1.6",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.js"
+		}
+	},
+	"license": "MIT",
+	"files": ["dist"],
+	"sideEffects": false,
+	"scripts": {
+		"build": "tsc",
+		"clean": "rm -rf dist",
+		"dev": "tsc --watch",
+		"prepublishOnly": "npm run clean && npm run build",
+		"lint": "biome lint .",
+		"format": "biome format src --write",
+		"example:basic": "cd examples/basic && npm install && npm run dev"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.14.0",
+		"@emotion/styled": "^11.14.0",
+		"@mui/icons-material": "^6.4.8",
+		"@mui/material": "^6.4.8",
+		"@mui/system": "^6.4.12",
+		"@reduxjs/toolkit": "^2.6.1",
+		"immer": "^10.1.1",
+		"@tiptap/core": "^2.11.7",
+		"@tiptap/extension-bold": "^2.11.7",
+		"@tiptap/extension-bullet-list": "^2.11.7",
+		"@tiptap/extension-character-count": "^2.11.7",
+		"@tiptap/extension-document": "^2.11.7",
+		"@tiptap/extension-heading": "^2.11.7",
+		"@tiptap/extension-history": "^2.11.7",
+		"@tiptap/extension-image": "^2.11.7",
+		"@tiptap/extension-italic": "^2.11.7",
+		"@tiptap/extension-list-item": "^2.11.7",
+		"@tiptap/extension-ordered-list": "^2.11.7",
+		"@tiptap/extension-paragraph": "^2.11.7",
+		"@tiptap/extension-table": "^2.11.7",
+		"@tiptap/extension-table-cell": "^2.11.7",
+		"@tiptap/extension-table-header": "^2.11.7",
+		"@tiptap/extension-table-row": "^2.11.7",
+		"@tiptap/extension-text": "^2.11.7",
+		"@tiptap/extension-underline": "^2.11.7",
+		"@tiptap/html": "^2.11.7",
+		"@tiptap/pm": "^2.11.7",
+		"@tiptap/react": "^2.11.7",
+		"@tiptap/suggestion": "^2.11.7",
+		"html-react-parser": "^5.2.3",
+		"lodash": "^4.17.21",
+		"mui-nested-menu": "^4.0.1",
+		"react-content-loader": "^7.0.2",
+		"react-redux": "^9.2.0",
+		"sanitize-html": "^2.15.0",
+		"usehooks-ts": "^3.1.1",
+		"uuid": "^11.1.0"
+	},
+	"peerDependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com",
+		"access": "restricted"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@types/lodash": "^4.17.16",
+		"@types/node": "^20",
+		"@types/react": "^18.2.0",
+		"@types/react-dom": "^18.2.0",
+		"@types/sanitize-html": "^2.15.0",
+		"@types/uuid": "^10.0.0",
+		"eslint": "^9",
+		"typescript": "^5"
+	}
 }

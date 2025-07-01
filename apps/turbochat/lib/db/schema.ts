@@ -10,7 +10,7 @@ import {
   foreignKey,
   boolean,
 } from 'drizzle-orm/pg-core';
-import type { EditorTypes } from '@wildfires-org/document-editor';
+import type { EditorTypes } from '@turbochat/tc-document-editor/types';
 
 export const user = pgTable('User', {
   id: uuid('id').primaryKey().notNull().defaultRandom(),

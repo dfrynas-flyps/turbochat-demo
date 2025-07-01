@@ -1,4 +1,0 @@
-export declare const StyledMoreVertIcon: import("@emotion/styled").StyledComponent<import("@mui/material").SvgIconOwnProps & import("@mui/material/OverridableComponent").CommonProps & Omit<Omit<import("react").SVGProps<SVGSVGElement>, "ref"> & {
-    ref?: ((instance: SVGSVGElement | null) => void | import("react").DO_NOT_USE_OR_YOU_WILL_BE_FIRED_CALLBACK_REF_RETURN_VALUES[keyof import("react").DO_NOT_USE_OR_YOU_WILL_BE_FIRED_CALLBACK_REF_RETURN_VALUES]) | import("react").RefObject<SVGSVGElement> | null | undefined;
-}, "style" | "className" | "classes" | "children" | "sx" | "color" | "fontSize" | "shapeRendering" | "viewBox" | "htmlColor" | "inheritViewBox" | "titleAccess"> & import("@mui/system").MUIStyledCommonProps<import("@mui/material").Theme>, {}, {}>;
-//# sourceMappingURL=MoreVertIcon.d.ts.map

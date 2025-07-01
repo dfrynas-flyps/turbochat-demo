@@ -4,6 +4,9 @@
 
 import type { EditorTypes } from "@wildfires-org/document-editor";
 
+// Re-export EditorTypes for consumer packages
+export type { EditorTypes };
+
 export const DocumentEditorTools = {
 	documentEditorList: "documentEditorList",
 	documentEditorView: "documentEditorView",

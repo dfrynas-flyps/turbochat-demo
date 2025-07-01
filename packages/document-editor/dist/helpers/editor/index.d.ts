@@ -23,8 +23,8 @@ export declare const getEditorDetailsBasedOnCursorPosition: (editor: Editor) => 
     afterCursorDoc: ProseMirrorNode;
     beforeCursorJSON: any;
     afterCursorJSON: any;
-    $from: import("prosemirror-model").ResolvedPos;
-    $to: import("prosemirror-model").ResolvedPos;
+    $from: import("@tiptap/pm/model").ResolvedPos;
+    $to: import("@tiptap/pm/model").ResolvedPos;
 };
 export declare const selectFirstVariableNode: () => Promise<void>;
 export {};

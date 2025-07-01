@@ -112,8 +112,8 @@ export declare const selectStatementById: ((state: {
     dependencyRecomputations: () => number;
     resetDependencyRecomputations: () => void;
 } & {
-    memoize: typeof import("reselect").weakMapMemoize;
-    argsMemoize: typeof import("reselect").weakMapMemoize;
+    memoize: typeof import("@reduxjs/toolkit").weakMapMemoize;
+    argsMemoize: typeof import("@reduxjs/toolkit").weakMapMemoize;
 };
 export declare const selectSectionById: ((state: {
     template: import("./types").TemplateState;
@@ -135,8 +135,8 @@ export declare const selectSectionById: ((state: {
     dependencyRecomputations: () => number;
     resetDependencyRecomputations: () => void;
 } & {
-    memoize: typeof import("reselect").weakMapMemoize;
-    argsMemoize: typeof import("reselect").weakMapMemoize;
+    memoize: typeof import("@reduxjs/toolkit").weakMapMemoize;
+    argsMemoize: typeof import("@reduxjs/toolkit").weakMapMemoize;
 };
 export declare const selectPreviousStatement: ((state: {
     template: import("./types").TemplateState;
@@ -230,8 +230,8 @@ export declare const selectPreviousStatement: ((state: {
     dependencyRecomputations: () => number;
     resetDependencyRecomputations: () => void;
 } & {
-    memoize: typeof import("reselect").weakMapMemoize;
-    argsMemoize: typeof import("reselect").weakMapMemoize;
+    memoize: typeof import("@reduxjs/toolkit").weakMapMemoize;
+    argsMemoize: typeof import("@reduxjs/toolkit").weakMapMemoize;
 };
 export declare const selectPromptsByType: ((state: {
     template: import("./types").TemplateState;
@@ -253,8 +253,8 @@ export declare const selectPromptsByType: ((state: {
     dependencyRecomputations: () => number;
     resetDependencyRecomputations: () => void;
 } & {
-    memoize: typeof import("reselect").weakMapMemoize;
-    argsMemoize: typeof import("reselect").weakMapMemoize;
+    memoize: typeof import("@reduxjs/toolkit").weakMapMemoize;
+    argsMemoize: typeof import("@reduxjs/toolkit").weakMapMemoize;
 };
 export declare const selectVariableRegistry: ((state: {
     template: import("./types").TemplateState;
@@ -276,7 +276,7 @@ export declare const selectVariableRegistry: ((state: {
     dependencyRecomputations: () => number;
     resetDependencyRecomputations: () => void;
 } & {
-    memoize: typeof import("reselect").weakMapMemoize;
-    argsMemoize: typeof import("reselect").weakMapMemoize;
+    memoize: typeof import("@reduxjs/toolkit").weakMapMemoize;
+    argsMemoize: typeof import("@reduxjs/toolkit").weakMapMemoize;
 };
 //# sourceMappingURL=selectors.d.ts.map
