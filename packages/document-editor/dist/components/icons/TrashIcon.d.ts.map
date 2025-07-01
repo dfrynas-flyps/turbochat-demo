@@ -1,0 +1,1 @@
+{"version":3,"file":"TrashIcon.d.ts","sourceRoot":"","sources":["../../../src/components/icons/TrashIcon.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAE,EAAE,EAAE,MAAM,OAAO,CAAA;AAE1B,KAAK,cAAc,GAAG;IACpB,KAAK,CAAC,EAAE,MAAM,CAAA;IACd,KAAK,CAAC,EAAE,MAAM,CAAA;IACd,MAAM,CAAC,EAAE,MAAM,CAAA;CAChB,CAAA;AAED,QAAA,MAAM,SAAS,EAAE,EAAE,CAAC,cAAc,CAWjC,CAAA;AAED,eAAe,SAAS,CAAA"}

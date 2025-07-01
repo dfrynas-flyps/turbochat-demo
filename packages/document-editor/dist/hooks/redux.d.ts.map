@@ -1,0 +1,1 @@
+{"version":3,"file":"redux.d.ts","sourceRoot":"","sources":["../../src/hooks/redux.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,oBAAoB,EAA4B,MAAM,aAAa,CAAA;AAC5E,OAAO,KAAK,EAAE,WAAW,EAAE,SAAS,EAAE,MAAM,gBAAgB,CAAA;AAG5D,eAAO,MAAM,cAAc,EAAE,MAAM,WAAyB,CAAA;AAC5D,eAAO,MAAM,cAAc,EAAE,oBAAoB,CAAC,SAAS,CAAe,CAAA"}

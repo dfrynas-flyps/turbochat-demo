@@ -1,0 +1,1 @@
+{"version":3,"file":"CheckMarkIcon.d.ts","sourceRoot":"","sources":["../../../src/components/icons/CheckMarkIcon.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAA;AAEzB,KAAK,kBAAkB,GAAG;IACxB,IAAI,CAAC,EAAE,MAAM,CAAA;IACb,KAAK,CAAC,EAAE,MAAM,CAAA;IACd,MAAM,CAAC,EAAE,MAAM,CAAA;CAChB,CAAA;AAED,eAAO,MAAM,aAAa,EAAE,KAAK,CAAC,EAAE,CAAC,kBAAkB,CAWtD,CAAA"}

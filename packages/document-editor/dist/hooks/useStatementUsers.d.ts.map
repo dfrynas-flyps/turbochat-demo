@@ -1,0 +1,1 @@
+{"version":3,"file":"useStatementUsers.d.ts","sourceRoot":"","sources":["../../src/hooks/useStatementUsers.tsx"],"names":[],"mappings":"AAEA,KAAK,QAAQ,GAAG;IACd,EAAE,EAAE,MAAM,CAAA;IACV,IAAI,EAAE,MAAM,CAAA;IACZ,SAAS,EAAE,MAAM,CAAA;CAClB,CAAA;AA0CD,eAAO,MAAM,iBAAiB;0BAIa,KAAK,CAAC,WAAW,CAAC,gBAAgB,CAAC;;2BAIlC,QAAQ,CAAC,IAAI,CAAC;sBAMnB,QAAQ;;;CAqB9C,CAAA"}

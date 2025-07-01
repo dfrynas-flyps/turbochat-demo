@@ -1,0 +1,1 @@
+{"version":3,"file":"store.d.ts","sourceRoot":"","sources":["../../src/redux/store.ts"],"names":[],"mappings":"AAGA,QAAA,MAAM,UAAU;;;;;;oCAWd,CAAA;AAEF,MAAM,MAAM,SAAS,GAAG,UAAU,CAAC,OAAO,UAAU,CAAC,QAAQ,CAAC,CAAA;AAC9D,MAAM,MAAM,WAAW,GAAG,OAAO,UAAU,CAAC,QAAQ,CAAA;AACpD,eAAe,UAAU,CAAA"}

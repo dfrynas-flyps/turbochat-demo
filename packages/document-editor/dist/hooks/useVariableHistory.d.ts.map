@@ -1,0 +1,1 @@
+{"version":3,"file":"useVariableHistory.d.ts","sourceRoot":"","sources":["../../src/hooks/useVariableHistory.ts"],"names":[],"mappings":"AAKA,OAAO,EAAE,oBAAoB,EAAE,8BAA8B,EAAE,MAAM,iBAAiB,CAAA;AAKtF,eAAO,MAAM,kBAAkB;4BAMnB,MAAM,cAAc,8BAA8B,KAAG,oBAAoB;4CAgBlE,MAAM,YAAY,MAAM,cAAc,8BAA8B;yCAqBpE,MAAM,YAAY,MAAM,cAAc,8BAA8B;CAYtF,CAAA"}

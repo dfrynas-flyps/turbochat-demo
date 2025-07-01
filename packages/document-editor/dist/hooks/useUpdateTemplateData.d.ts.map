@@ -1,0 +1,1 @@
+{"version":3,"file":"useUpdateTemplateData.d.ts","sourceRoot":"","sources":["../../src/hooks/useUpdateTemplateData.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,EAAE,YAAY,EAAE,iBAAiB,EAAE,MAAM,iBAAiB,CAAA;AAKtE,eAAO,MAAM,qBAAqB;+BAuBQ,MAAM;;0BARjB,OAAO,CAAC,YAAY,CAAC;wDAeS;QAAE,SAAS,EAAE,MAAM,CAAC;QAAC,QAAQ,EAAE,iBAAiB,EAAE,CAAA;KAAE;CAmBhH,CAAA"}

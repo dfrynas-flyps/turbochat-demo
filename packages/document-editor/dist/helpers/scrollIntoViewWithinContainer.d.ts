@@ -1,0 +1,2 @@
+export declare const scrollIntoViewWithinContainer: (container: HTMLElement | null, element: HTMLElement | null, SCROLL_TOP_OFFSET: number) => null | undefined;
+//# sourceMappingURL=scrollIntoViewWithinContainer.d.ts.map

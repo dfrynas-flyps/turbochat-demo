@@ -1,0 +1,1 @@
+{"version":3,"file":"UserPlusIcon.d.ts","sourceRoot":"","sources":["../../../src/components/icons/UserPlusIcon.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAA;AAEzB,KAAK,iBAAiB,GAAG;IACvB,KAAK,CAAC,EAAE,MAAM,CAAA;IACd,MAAM,CAAC,EAAE,MAAM,CAAA;IACf,KAAK,CAAC,EAAE,MAAM,CAAA;CACf,CAAA;AAED,eAAO,MAAM,YAAY,EAAE,KAAK,CAAC,EAAE,CAAC,iBAAiB,CAWpD,CAAA"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"LastStatementToggle.d.ts","sourceRoot":"","sources":["../../src/components/LastStatementToggle.tsx"],"names":[],"mappings":"AAQA,OAAO,EAAkB,iBAAiB,EAAE,MAAM,iBAAiB,CAAA;AAInE,KAAK,wBAAwB,GAAG;IAC9B,SAAS,EAAE,iBAAiB,CAAA;CAC7B,CAAA;AAED,eAAO,MAAM,mBAAmB,EAAE,KAAK,CAAC,EAAE,CAAC,wBAAwB,CA2BlE,CAAA"}

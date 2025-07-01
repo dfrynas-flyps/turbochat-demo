@@ -21,7 +21,7 @@
 	},
 	"dependencies": {
 		"@hono/zod-validator": "^0.4.3",
-		"@wildfires-org/document-editor": "^0.1.6",
+		"@wildfires-org/document-editor": "workspace:*",
 		"ai": "^4.0.0",
 		"drizzle-orm": "^0.30.9",
 		"hono": "^4.7.5",

@@ -1,0 +1,1 @@
+{"version":3,"file":"CrossIcon.d.ts","sourceRoot":"","sources":["../../../src/components/icons/CrossIcon.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,KAAK,MAAM,OAAO,CAAA;AAE9B,UAAU,cAAc;IACtB,KAAK,CAAC,EAAE,MAAM,CAAA;IACd,MAAM,CAAC,EAAE,MAAM,CAAA;IACf,KAAK,CAAC,EAAE,MAAM,CAAA;CACf;AAED,eAAO,MAAM,SAAS,EAAE,KAAK,CAAC,EAAE,CAAC,cAAc,CAS9C,CAAA"}

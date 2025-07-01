@@ -1,0 +1,1 @@
+{"version":3,"file":"TableIcon.d.ts","sourceRoot":"","sources":["../../../src/components/icons/TableIcon.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAA;AAEzB,UAAU,cAAc;IACtB,KAAK,CAAC,EAAE,MAAM,CAAA;IACd,MAAM,CAAC,EAAE,MAAM,CAAA;IACf,KAAK,CAAC,EAAE,MAAM,CAAA;CACf;AAED,QAAA,MAAM,SAAS,EAAE,KAAK,CAAC,EAAE,CAAC,cAAc,CASvC,CAAA;AAED,eAAe,SAAS,CAAA"}
