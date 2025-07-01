@@ -10,6 +10,7 @@ import {
   foreignKey,
   boolean,
 } from 'drizzle-orm/pg-core';
+import type { EditorTypes } from '@wildfires-org/document-editor';
 
 export const user = pgTable('User', {
   id: uuid('id').primaryKey().notNull().defaultRandom(),
@@ -109,7 +110,7 @@ export const document = pgTable(
     createdAt: timestamp('createdAt').notNull(),
     title: text('title').notNull(),
     content: text('content'),
-    kind: varchar('text', { enum: ['text', 'code', 'image', 'sheet'] })
+    kind: varchar('text', { enum: ['text', 'code', 'image', 'sheet', 'richTextEditor'] })
       .notNull()
       .default('text'),
     userId: uuid('userId')
@@ -124,6 +125,14 @@ export const document = pgTable(
 );
 
 export type Document = InferSelectModel<typeof document>;
+
+export const richTextEditor = pgTable('RichTextEditor', {
+  id: uuid('id').primaryKey().notNull().defaultRandom(),
+  documentId: uuid('documentId'),
+  json: json('json').$type<EditorTypes.TemplateData>().notNull(),
+});
+
+export type RichTextEditor = InferSelectModel<typeof richTextEditor>;
 
 export const suggestion = pgTable(
   'Suggestion',

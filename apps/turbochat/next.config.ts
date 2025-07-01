@@ -3,6 +3,10 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   experimental: {
     ppr: true,
+    optimizePackageImports: [
+      '@wildfires-org/document-editor',
+      '@turbochat/tc-document-editor'
+    ],
   },
   images: {
     remotePatterns: [

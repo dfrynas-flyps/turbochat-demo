@@ -11,6 +11,10 @@ export const authConfig = {
   ],
   callbacks: {
     authorized({ auth, request: { nextUrl } }) {
+      if (nextUrl.pathname.startsWith('/api/templates-ai') || nextUrl.pathname.startsWith('/api/rich-text-editor')) {
+        return true;
+      }
+
       const isLoggedIn = !!auth?.user;
       const isOnChat = nextUrl.pathname.startsWith('/');
       const isOnRegister = nextUrl.pathname.startsWith('/register');

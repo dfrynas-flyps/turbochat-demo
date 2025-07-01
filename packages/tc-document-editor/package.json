@@ -1,0 +1,55 @@
+{
+  "name": "@turbochat/tc-document-editor",
+  "version": "0.1.0",
+  "description": "Document editor component for TurboChat",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./client": "./src/client.ts",
+    "./server": "./src/server.ts",
+    "./types": "./src/types.ts"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "rm -rf dist && tsc && bun build src/client.ts src/server.ts --outdir dist --format esm --format cjs --target node --declaration",
+    "format": "biome format --write .",
+    "lint": "biome check .",
+    "dev": "npx tsc --watch"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.4.3",
+    "@wildfires-org/document-editor": "^0.1.6",
+    "ai": "^4.0.0",
+    "drizzle-orm": "^0.30.9",
+    "hono": "^4.7.5",
+    "next-auth": "5.0.0-beta.25",
+    "postgres": "^3.4.5",
+    "react": "^18.2.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.10.5",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.7.2"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wildfires-org/tc-document-editor.git"
+  },
+  "keywords": ["turbochat", "document-editor", "ai", "vibe-coding"],
+  "author": "Wildfires.org",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wildfires-org/tc-document-editor/issues"
+  },
+  "homepage": "https://github.com/wildfires-org/tc-document-editor#readme"
+}

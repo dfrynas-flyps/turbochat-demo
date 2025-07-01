@@ -34,7 +34,8 @@ export const maxDuration = 60;
 const createTools = ({
   session,
   dataStream,
-}: { session: Session; dataStream: DataStreamWriter }) => ({
+  messages,
+}: { session: Session; dataStream: DataStreamWriter; messages?: Array<UIMessage> }) => ({
   activeToolsList: [
     Tools.getWeather,
     Tools.createDocument,
@@ -43,7 +44,7 @@ const createTools = ({
   ],
   tools: {
     getWeather,
-    createDocument: createDocument({ session, dataStream }),
+    createDocument: createDocument({ session, dataStream, messages: messages ?? [] }),
     updateDocument: updateDocument({ session, dataStream }),
     requestSuggestions: requestSuggestions({
       session,
@@ -105,12 +106,15 @@ export async function POST(request: Request) {
 
     return createDataStreamResponse({
       execute: (dataStream) => {
-        const { activeToolsList, tools } = createTools({ session, dataStream });
+        const { activeToolsList, tools } = createTools({ session, dataStream, messages });
 
         const result = streamText({
           model: myProvider.languageModel(selectedChatModel),
           system: systemPrompt({ selectedChatModel }),
-          messages,
+          messages: messages.map((message) => ({
+            ...message,
+            experimental_attachments: (message.experimental_attachments ?? []).filter((attachment) => attachment.contentType && ['image/jpeg', 'image/png'].includes(attachment.contentType)),
+          })),
           maxSteps: 5,
           experimental_activeTools:
             selectedChatModel === 'chat-model-reasoning' ? [] : activeToolsList,

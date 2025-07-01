@@ -23,6 +23,7 @@ import { Textarea } from './ui/textarea';
 import { SuggestedActions } from './suggested-actions';
 import equal from 'fast-deep-equal';
 import type { UseChatHelpers } from '@ai-sdk/react';
+import { TemplatizeAttachmentButton } from '@turbochat/tc-document-editor/client';
 
 function PureMultimodalInput({
   chatId,
@@ -253,6 +254,23 @@ function PureMultimodalInput({
       </div>
 
       <div className="absolute bottom-0 right-0 p-2 w-fit flex flex-row justify-end">
+        {/* Add custom templatize attachment button above SendButton */}
+        <TemplatizeAttachmentButton
+          attachments={attachments}
+          onClick={() => {
+            append(
+              {
+                role: 'user',
+                content: `Templatize this attachment and create rich text editor named "${attachments[0].name}"`,
+              },
+              {
+                experimental_attachments: attachments,
+              },
+            );
+            setAttachments([]);
+          }}
+        />
+
         {status === 'submitted' ? (
           <StopButton stop={stop} setMessages={setMessages} />
         ) : (
