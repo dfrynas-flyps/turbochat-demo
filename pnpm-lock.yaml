@@ -280,8 +280,8 @@ importers:
         specifier: ^0.4.3
         version: 0.4.3(hono@4.7.5)(zod@3.24.2)
       '@wildfires-org/document-editor':
-        specifier: ^0.1.6
-        version: 0.1.6(@types/react@18.3.20)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(redux@5.0.1)
+        specifier: git+https://dfrynas-flyps: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@github.com/Wildfires-org/document-editor.git#develop
+        version: git+https://dfrynas-flyps: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@github.com/Wildfires-org/document-editor.git#b03f0158c7f32f7d8157cc5a2352c2151c7495ee(@types/react@18.3.20)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(redux@5.0.1)
       ai:
         specifier: ^4.0.0
         version: 4.2.10(react@18.3.1)(zod@3.24.2)
@@ -2215,8 +2215,9 @@ packages:
   '@vue/shared@3.5.13':
     resolution: {integrity: sha512-/hnE/qP5ZoGpol0a5mDi45bOd7t3tjYJBjsgCsivow7D48cJeV5l05RD82lPqi7gRiphZM37rnhW1l6ZoCNNnQ==}
 
-  '@wildfires-org/document-editor@0.1.6':
-    resolution: {integrity: sha512-FGGJgcxQurtAI7sUQFx4RrC/5H0wa1Agt+I9FaCB11kActpjOmZpJX7XDzIZ6HJeDJEo609UopT/ms1pNagG7g==, tarball: https://npm.pkg.github.com/download/@wildfires-org/document-editor/0.1.6/1235174e514a96418f4d9b63be758fb12e5d6a74}
+  '@wildfires-org/document-editor@git+https://dfrynas-flyps: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@github.com/Wildfires-org/document-editor.git#b03f0158c7f32f7d8157cc5a2352c2151c7495ee':
+    resolution: {commit: b03f0158c7f32f7d8157cc5a2352c2151c7495ee, repo: https://dfrynas-flyps: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@github.com/Wildfires-org/document-editor.git, type: git}
+    version: 0.1.6
     peerDependencies:
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -6520,7 +6521,7 @@ snapshots:
   '@vue/shared@3.5.13':
     optional: true
 
-  '@wildfires-org/document-editor@0.1.6(@types/react@18.3.20)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(redux@5.0.1)':
+  '@wildfires-org/document-editor@git+https://dfrynas-flyps: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@github.com/Wildfires-org/document-editor.git#b03f0158c7f32f7d8157cc5a2352c2151c7495ee(@types/react@18.3.20)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(redux@5.0.1)':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@18.3.20)(react@18.3.1)
       '@emotion/styled': 11.14.1(@emotion/react@11.14.0(@types/react@18.3.20)(react@18.3.1))(@types/react@18.3.20)(react@18.3.1)
